@@ -1,6 +1,5 @@
 define(function (require) {
-    const WIDTH = 600;
-    const HEIGHT = 800;
+
     let Entities = require('Entities');
 
     class GameManager {
@@ -39,7 +38,7 @@ define(function (require) {
             this.scale = currentWidth / WIDTH;
         }
         onchangePlane (obj) {
-            this.entities.plane.updatePosition(obj.x, obj.y);
+            this.entities.planeManger.updatePosition(obj.x, obj.y);
         }
         loop () {
             requestAnimationFrame(this.loop.bind(this));
